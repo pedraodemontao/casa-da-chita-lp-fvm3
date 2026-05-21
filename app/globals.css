@@ -1,0 +1,492 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DESIGN SYSTEM — Casa da Chita
+   Fonte de verdade: docs/tokens.json (espelhar mudanças aqui)
+   Última atualização: 14/05/2026
+   ============================================================ */
+
+@theme inline {
+  /* ===== Cores primárias ===== */
+  --color-creme: #EBD6C2;
+  --color-creme-claro: #F5E7D6;
+  --color-creme-escuro: #D9C0A8;
+  --color-creme-papel: #EBD6C2;
+  --color-azul-royal: #323C7F;
+  --color-azul-escuro: #252D5E;
+  --color-azul-claro: #5B7AC9;
+  --color-vermelho-chita: #CC1E15;
+  --color-vermelho-escuro: #A8170F;
+  --color-mostarda: #E2D030;
+  --color-mostarda-clara: #F0E468;
+  --color-verde-folha: #98A636;
+  --color-rosa-chita: #E85A7A;
+  --color-tinta: #1A1A1A;
+  --color-tinta-suave: #3D3D3D;
+
+  /* ===== Famílias tipográficas ===== */
+  --font-serif: var(--font-dm-serif), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-manuscrita: var(--font-allura), cursive;
+}
+
+/* ============================================================
+   Tokens NÃO consumidos pelo Tailwind diretamente
+   (consumidos via var(--...) em componentes)
+   ============================================================ */
+
+:root {
+  /* ===== Aliases semânticos de cor ===== */
+  --fundo-papel:         var(--color-creme);
+  --fundo-papel-claro:   var(--color-creme-claro);
+  --fundo-papel-escuro:  var(--color-creme-escuro);
+  --fundo-secao-azul:    var(--color-azul-royal);
+  --texto-principal:     var(--color-tinta);
+  --texto-suave:         var(--color-tinta-suave);
+  --texto-sobre-azul:    var(--color-creme);
+  --titulo:              var(--color-azul-royal);
+  --destaque:            var(--color-vermelho-chita);
+  --cta-fundo:           var(--color-vermelho-chita);
+  --cta-texto:           var(--color-creme);
+  --cta-shadow-bottom:   var(--color-vermelho-escuro);
+  --cta-hover-fundo:     var(--color-azul-royal);
+  --cta-hover-shadow:    var(--color-azul-escuro);
+  --selo-fundo:          var(--color-mostarda);
+  --selo-texto:          var(--color-azul-royal);
+  --borda-tracejada:     var(--color-mostarda);
+
+  /* ===== Radius ===== */
+  --radius-none: 0;
+  --radius-xs:   2px;
+  --radius-sm:   3px;
+  --radius-md:   4px;
+  --radius-lg:   8px;
+  --radius-xl:   12px;
+  --radius-full: 9999px;
+
+  /* ===== Bordas ===== */
+  --border-thin:  1px;
+  --border-base:  2px;
+  --border-thick: 3px;
+
+  /* ===== Sombras ===== */
+  --shadow-papel-leve:
+    0 1px 0 rgba(50, 60, 127, 0.08),
+    1px 2px 6px rgba(50, 60, 127, 0.06);
+  --shadow-papel-elevado:
+    0 2px 0 rgba(50, 60, 127, 0.12),
+    2px 4px 12px rgba(50, 60, 127, 0.10);
+  --shadow-cta-vermelho:
+    0 2px 0 var(--color-vermelho-escuro),
+    1px 4px 12px rgba(204, 30, 21, 0.18);
+  --shadow-cta-vermelho-hover:
+    0 2px 0 var(--color-azul-escuro),
+    1px 4px 16px rgba(50, 60, 127, 0.22);
+  --shadow-cta-creme:
+    0 2px 0 var(--color-mostarda),
+    1px 4px 12px rgba(31, 58, 138, 0.15);
+  --shadow-selo-envelhecido:
+    1px 1px 0 rgba(50, 60, 127, 0.18),
+    3px 3px 0 rgba(50, 60, 127, 0.08);
+
+  /* ===== Motion — durações ===== */
+  --duration-fast:     200ms;
+  --duration-base:     300ms;
+  --duration-moderate: 500ms;
+  --duration-slow:     800ms;
+  --duration-slower:   1200ms;
+
+  /* ===== Motion — easings ===== */
+  --easing-standard: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --easing-out:      cubic-bezier(0, 0, 0.2, 1);
+  --easing-in-out:   cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ===== Letter-spacing ===== */
+  --tracking-titulo:      -0.01em;
+  --tracking-cta:          0.01em;
+  --tracking-wide:         0.05em;
+  --tracking-eyebrow:      0.3em;
+  --tracking-eyebrow-lg:   0.35em;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Imagens fluidas no mobile */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* tap-target mínimo 44px em mobile */
+@media (max-width: 767px) {
+  button,
+  a.cta-primary,
+  details summary {
+    min-height: 44px;
+  }
+}
+
+/* Acessibilidade — quem prefere menos movimento, desativa tudo */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--color-creme);
+  color: var(--color-tinta);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--color-azul-royal);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.destaque {
+  color: var(--color-vermelho-chita);
+  font-style: italic;
+}
+
+.manuscrita {
+  font-family: var(--font-manuscrita);
+  font-weight: 400;
+  color: var(--color-azul-royal);
+}
+
+/* ===== TEXTURAS — Papel Apergaminhado oficial ===== */
+
+.bg-paper {
+  background-color: var(--color-creme);
+  background-image:
+    radial-gradient(ellipse at 18% 22%, rgba(204, 30, 21, 0.06) 0%, transparent 45%),
+    radial-gradient(ellipse at 82% 78%, rgba(50, 60, 127, 0.06) 0%, transparent 48%),
+    radial-gradient(ellipse at 8% 78%, rgba(160, 100, 60, 0.07) 0%, transparent 40%),
+    radial-gradient(circle at 1px 1px, rgba(50, 60, 127, 0.08) 1px, transparent 0),
+    radial-gradient(circle at 13px 8px, rgba(204, 30, 21, 0.03) 0.5px, transparent 0);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 22px 22px, 41px 31px;
+}
+
+.bg-paper-claro {
+  background-color: var(--color-creme-claro);
+  background-image:
+    radial-gradient(ellipse at 25% 35%, rgba(204, 30, 21, 0.04) 0%, transparent 40%),
+    radial-gradient(ellipse at 75% 65%, rgba(50, 60, 127, 0.04) 0%, transparent 45%),
+    radial-gradient(circle at 1px 1px, rgba(50, 60, 127, 0.05) 1px, transparent 0),
+    radial-gradient(circle at 14px 9px, rgba(226, 208, 48, 0.05) 0.5px, transparent 0);
+  background-size: 100% 100%, 100% 100%, 22px 22px, 43px 32px;
+}
+
+.bg-papel-amassado {
+  background-color: var(--color-creme-papel);
+  background-image:
+    radial-gradient(circle at 30% 20%, rgba(0, 0, 0, 0.025), transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(50, 60, 127, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 15% 80%, rgba(160, 100, 60, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 1px 1px, rgba(50, 60, 127, 0.07) 1px, transparent 0);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 24px 24px;
+}
+
+/* Faixa de textura chita lateral (opcional pra hero/seções decorativas) */
+.chita-faixa-esq,
+.chita-faixa-dir {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  opacity: 0.88;
+  z-index: 0;
+}
+.chita-faixa-esq {
+  left: 0;
+  background-image: url('/textura/chita-original.png');
+  background-position: left center;
+}
+.chita-faixa-dir {
+  right: 0;
+  background-image: url('/textura/chita-mirror.png');
+  background-position: right center;
+}
+
+/* content-visibility: o navegador pula a renderização de seções fora da tela
+   no carregamento inicial, liberando a thread principal mais cedo (melhora LCP).
+   contain-intrinsic-size reserva altura estimada pra não pular o scroll. */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
+/* ===== COSTURA / BORDAS COSTURADAS ===== */
+
+.costura {
+  border-top: 2px dashed var(--color-mostarda);
+  border-image-slice: 1;
+}
+
+.borda-costurada {
+  border: 2px dashed var(--color-mostarda);
+  background: var(--color-creme);
+  position: relative;
+}
+
+.borda-costurada-azul {
+  border: 2px dashed var(--color-azul-royal);
+  background: var(--color-creme);
+}
+
+/* divisor de seção com costura animada */
+.divisor-costurado {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.divisor-costurado::before {
+  content: '';
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  height: 0;
+  border-top: 2px dashed var(--color-mostarda);
+  opacity: 0.5;
+}
+
+/* ===== TILT (DESATIVADO — Pedro pediu tudo reto) ===== */
+
+.tilt-1 { transform: rotate(0); }
+.tilt-2 { transform: rotate(0); }
+.tilt-3 { transform: rotate(0); }
+.tilt-mais { transform: rotate(0); }
+.tilt-menos { transform: rotate(0); }
+
+/* ===== SELO ENVELHECIDO ===== */
+
+.selo {
+  background: var(--color-mostarda);
+  color: var(--color-azul-royal);
+  padding: 12px 24px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  box-shadow:
+    1px 1px 0 rgba(50, 60, 127, 0.18),
+    3px 3px 0 rgba(50, 60, 127, 0.08);
+}
+
+.selo::before,
+.selo::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--color-creme);
+  border-radius: 50%;
+}
+.selo::before { top: 50%; left: -3px; transform: translateY(-50%); }
+.selo::after { top: 50%; right: -3px; transform: translateY(-50%); }
+
+/* ===== BOTÕES ===== */
+
+.cta-primary {
+  background: var(--color-vermelho-chita);
+  color: var(--color-creme);
+  padding: 20px 36px;
+  border-radius: 3px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow:
+    0 2px 0 var(--color-vermelho-escuro),
+    1px 4px 12px rgba(204, 30, 21, 0.18);
+}
+.cta-primary:hover {
+  background: var(--color-azul-royal);
+  box-shadow:
+    0 2px 0 var(--color-azul-escuro),
+    1px 4px 16px rgba(50, 60, 127, 0.22);
+  transform: translateY(-2px);
+}
+.cta-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 0 var(--color-vermelho-escuro);
+}
+
+.cta-ghost {
+  border: 2px solid var(--color-azul-royal);
+  color: var(--color-azul-royal);
+  background: transparent;
+  padding: 18px 32px;
+  border-radius: 3px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.cta-ghost:hover {
+  background: var(--color-azul-royal);
+  color: var(--color-creme);
+}
+
+/* ===== ANIMAÇÕES — BORDADO/COSTURA ===== */
+
+@keyframes bordar-flor {
+  from { stroke-dashoffset: 200; opacity: 0.3; }
+  to { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes costurar-linha {
+  /* anima transform em vez de width (composta, roda no compositor) */
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes florescer {
+  0% { transform: scale(0.5) rotate(-10deg); opacity: 0; }
+  60% { transform: scale(1.05) rotate(2deg); opacity: 0.9; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Pulse via pseudo-elemento — anima transform+opacity (composta) em vez de box-shadow */
+@keyframes pulse-soft {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-fade-up { animation: fade-up 0.9s ease-out forwards; opacity: 0; }
+.animate-fade-up-d1 { animation: fade-up 0.9s 0.15s ease-out forwards; opacity: 0; }
+.animate-fade-up-d2 { animation: fade-up 0.9s 0.3s ease-out forwards; opacity: 0; }
+.animate-fade-up-d3 { animation: fade-up 0.9s 0.45s ease-out forwards; opacity: 0; }
+.animate-fade-up-d4 { animation: fade-up 0.9s 0.6s ease-out forwards; opacity: 0; }
+.animate-fade-up-d5 { animation: fade-up 0.9s 0.75s ease-out forwards; opacity: 0; }
+
+.cta-pulse-soft { position: relative; isolation: isolate; }
+.cta-pulse-soft::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--color-vermelho-chita);
+  animation: pulse-soft 2.4s ease-out infinite;
+  transform-origin: center;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+.ticker-track { animation: ticker-scroll 50s linear infinite; }
+
+@keyframes respirar {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.005) translateY(-2px); }
+}
+.respirar { animation: respirar 6s ease-in-out infinite; }
+
+@keyframes balanco {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+.balanco { animation: balanco 4s ease-in-out infinite; }
+.balanco-lento { animation: balanco 7s ease-in-out infinite; }
+
+.flor-bordando path,
+.flor-bordando circle,
+.flor-bordando ellipse {
+  stroke-dasharray: 200;
+  animation: bordar-flor 2.5s ease-out forwards;
+}
+
+.flor-bordando.d2 path,
+.flor-bordando.d2 circle,
+.flor-bordando.d2 ellipse {
+  animation-delay: 0.3s;
+}
+
+.flor-florescer {
+  animation: florescer 1.2s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+/* ===== FAQ details ===== */
+
+details {
+  border-bottom: 1px dashed var(--color-creme-escuro);
+  padding: 24px 0;
+}
+details summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-serif);
+  font-size: 22px;
+  color: var(--color-azul-royal);
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::after {
+  content: "+";
+  font-size: 36px;
+  color: var(--color-mostarda);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  transition: transform 0.3s ease, color 0.3s ease;
+  line-height: 1;
+}
+details[open] summary::after {
+  content: "−";
+  color: var(--color-vermelho-chita);
+}
+details[open] p {
+  margin-top: 16px;
+  animation: fade-up 0.5s ease-out forwards;
+}
+
+/* scallop bottom */
+.scallop-bottom {
+  --r: 12px;
+  -webkit-mask:
+    radial-gradient(var(--r) at 50% calc(100% - var(--r)),#000 99%,#0000 101%) calc(50% - 2*var(--r)) 100%/calc(4*var(--r)) 100% repeat-x,
+    linear-gradient(#000 0 0) top/100% calc(100% - var(--r)) no-repeat;
+          mask:
+    radial-gradient(var(--r) at 50% calc(100% - var(--r)),#000 99%,#0000 101%) calc(50% - 2*var(--r)) 100%/calc(4*var(--r)) 100% repeat-x,
+    linear-gradient(#000 0 0) top/100% calc(100% - var(--r)) no-repeat;
+}
