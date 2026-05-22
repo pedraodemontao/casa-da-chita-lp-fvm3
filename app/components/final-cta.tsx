@@ -1,7 +1,6 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { goToCheckout } from "./botao-compra";
 
 const ParallaxPhoto = dynamic(() => import("./animations/parallax-photo"));
 import {
@@ -15,7 +14,6 @@ import {
 } from "./marca";
 
 export default function FinalCta() {
- const handleCheckout = () => goToCheckout(99.90);
 
  return (
  <Secao fundo="paper-claro" padding="compact" largura="large">
@@ -53,7 +51,7 @@ export default function FinalCta() {
  className="mb-9"
  />
 
- <BotaoCta onClick={handleCheckout} pulse>
+<BotaoCta href="#oferta" pulse>
  Quero fazer minha primeira bolsa
  </BotaoCta>
 

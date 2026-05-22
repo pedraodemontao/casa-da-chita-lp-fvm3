@@ -30,7 +30,7 @@ export default function Page() {
       <SecaoCTACompacta
         manuscrita="vem fazer a sua"
         fundo="paper-claro"
-        acao="checkout"
+        acao="oferta"
       />
       <MetodoPorDias />
       <TudoIncluso />
@@ -39,14 +39,14 @@ export default function Page() {
       <SecaoCTACompacta
         manuscrita="a próxima pode ser você ✿"
         fundo="creme-claro"
-        acao="checkout"
+        acao="oferta"
       />
       <DivisorCostura />
       <PraQuem />
       <SecaoCTACompacta
         manuscrita="esse curso é pra você"
         fundo="paper-claro"
-        acao="checkout"
+        acao="oferta"
       />
       <Bonus />
       <Oferta />
