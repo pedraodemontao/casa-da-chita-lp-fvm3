@@ -140,7 +140,7 @@ export const FLOWS: Record<string, FlowStep[]> = {
 
         <p>Sua compra do <strong>Faça Você Mesma 3.0</strong> tá confirmada. Você é uma de nós agora.</p>
 
-        <p>Pra começar, é só clicar no botão abaixo. Seu acesso é vitalício — pode entrar e sair quantas vezes quiser.</p>
+        <p>Pra começar, é só clicar no botão abaixo. O acesso é imediato — pode entrar quando quiser.</p>
 
         <p style="font-style: italic; color: #323C7F;">Em 7 noites a gente termina sua primeira bolsa. Não tem mistério, linda. Eu te acompanho passo a passo.</p>
       `,

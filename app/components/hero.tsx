@@ -53,7 +53,7 @@ export default function Hero() {
  </BotaoCta>
 
  <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm text-tinta-suave">
- <span className="flex items-center gap-2">🪡 Acesso vitalício</span>
+ <span className="flex items-center gap-2">🪡 Acesso imediato</span>
  <span className="flex items-center gap-2">🧵 14 dias de garantia</span>
  <span className="flex items-center gap-2">🏠 +1.000 alunas</span>
  </div>

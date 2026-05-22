@@ -4,7 +4,7 @@
  *
  * @example
  * <ListaItens icone="check" cor="vermelho-chita" items={[
- *   "Acesso vitalício",
+ *   "Acesso imediato",
  *   "14 dias de garantia",
  *   "Grupo de alunas",
  * ]} />

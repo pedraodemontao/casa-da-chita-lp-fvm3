@@ -60,7 +60,7 @@ import {
 
   <ListaItens
     formato="inline"
-    items={["Acesso vitalício", "14 dias de garantia", "+1.000 alunas"]}
+    items={["Acesso imediato", "14 dias de garantia", "+1.000 alunas"]}
   />
 
   <BotaoCta href="#oferta" pulse>
