@@ -42,7 +42,7 @@ export default function Jacira() {
  Bordo há mais de 25 anos, no ateliê da Casa da Chita em Ouro Preto. Linha, agulha e chita há tanto tempo que perdi a conta.
  </p>
  <p>
- Tem muita gente que me liga dizendo: <em>&ldquo;Jacira, eu nunca peguei numa agulha!&rdquo;</em> E eu digo: não tem problema, linda. Não tem mistério — é só entender a dinâmica do ponto. Já ensinei mais de 1.000 mulheres assim.
+ Tem muita gente que me liga dizendo: <em>&ldquo;Jacira, eu nunca peguei numa agulha!&rdquo;</em> E eu digo: não tem problema, linda. Não tem mistério, é só entender a dinâmica do ponto. Já ensinei mais de 1.000 mulheres assim.
  </p>
  <p>
  Em 2023, passei por um câncer. Nesse tempo, criei o Coração Bordado. O bordado me devolveu o tempo que a doença tinha me tomado. A linha não para.

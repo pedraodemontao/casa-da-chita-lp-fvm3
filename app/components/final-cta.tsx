@@ -23,7 +23,7 @@ export default function FinalCta() {
  <ParallaxPhoto range={50}>
  <FotoEmoldurada
  src="/fotos/jacira-segurando-varias-bolsas.jpg"
- alt="Jacira com várias bolsas — convite final"
+ alt="Jacira com várias bolsas, convite final"
  aspect="4-5"
  corMoldura="creme"
  />
@@ -41,7 +41,7 @@ export default function FinalCta() {
  <p className="text-lg text-tinta-suave mb-8 italic font-serif">
  Em 7 noites isso pode ser real.
  <br />
- Vem com a gente, querida — não tem mistério.
+ Vem com a gente, querida, não tem mistério.
  </p>
 
  <ListaItens

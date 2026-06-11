@@ -33,7 +33,7 @@ export default function Garantia() {
  </TituloEditorial>
 
  <p className="text-lg md:text-xl leading-relaxed text-creme/90 max-w-2xl mx-auto mb-8">
- Se você abrir o curso, ver as aulas e sentir que não é pra você — me manda uma mensagem dentro de 14 dias e eu devolvo cada centavo.
+ Se você abrir o curso, ver as aulas e sentir que não é pra você, me manda uma mensagem dentro de 14 dias e eu devolvo cada centavo.
  <br />
  <br />
  Sem perguntas. Sem julgamento. <strong className="text-mostarda font-normal">Só linha e amor.</strong>

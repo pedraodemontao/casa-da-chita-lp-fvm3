@@ -5,7 +5,7 @@ export default function Bonus() {
    {
      n: "01",
      titulo: "35 Pontos Essenciais",
-     body: "Biblioteca catalogada com 35 pontos de bordado em vídeo curto — referência vitalícia que você consulta sempre que esquecer.",
+     body: "Biblioteca catalogada com 35 pontos de bordado em vídeo curto, referência vitalícia que você consulta sempre que esquecer.",
      valor: "R$ 67",
    },
    {
@@ -37,7 +37,7 @@ export default function Bonus() {
    {
      n: "06",
      titulo: "Lista de Fornecedores",
-     body: "Onde comprar tecido de chita, linha mouliné e ferragens com qualidade — fornecedores testados por mim no ateliê.",
+     body: "Onde comprar tecido de chita, linha mouliné e ferragens com qualidade, fornecedores testados por mim no ateliê.",
      valor: "R$ 7",
    },
  ];

@@ -9,7 +9,7 @@ import {
 } from "./marca";
 
 // Sticky-stack só carrega no desktop (esconde via CSS em mobile),
-// então separa o chunk via next/dynamic — só puxa o JS quando faz sentido.
+// então separa o chunk via next/dynamic, só puxa o JS quando faz sentido.
 const StickyStackCard = dynamic(() => import("./animations/sticky-stack"));
 
 const modelos = [
@@ -17,7 +17,7 @@ const modelos = [
     src: "/fotos/bolsa-lilas-flores-bordadas.jpg",
     titulo: "Modelo Flora",
     descricao:
-      "Chita lilás com flores soltas em ponto haste. Combina com tudo — do casual ao mais arrumadinho.",
+      "Chita lilás com flores soltas em ponto haste. Combina com tudo, do casual ao mais arrumadinho.",
   },
   {
     src: "/fotos/bolsa-azul-miniflores.jpg",
@@ -77,7 +77,7 @@ export default function GaleriaBolsas() {
               O que você vai <Destaque>criar?</Destaque>
             </TituloEditorial>
             <p className="mt-4 text-base md:text-lg text-tinta-suave max-w-2xl mx-auto">
-              Mesmo passo a passo, mas cada uma faz a sua —{" "}
+              Mesmo passo a passo, mas cada uma faz a sua:{" "}
               <strong className="text-azul-royal font-normal">cor, estampa e ponto</strong>{" "}
               do jeito que combina com ela.
             </p>

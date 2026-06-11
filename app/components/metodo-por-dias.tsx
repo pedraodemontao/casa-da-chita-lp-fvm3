@@ -20,7 +20,7 @@ const etapas: Etapa[] = [
  {
  diaLabel: "Dia 1-2",
  titulo: "As primeiras técnicas",
- body: "Te apresento os materiais e os pontos básicos — cruz, haste e o famoso caseado. Não tem mistério, é só entender a dinâmica do ponto.",
+ body: "Te apresento os materiais e os pontos básicos, cruz, haste e o famoso caseado. Não tem mistério, é só entender a dinâmica do ponto.",
  Icon: Agulha,
  },
  {
@@ -32,19 +32,19 @@ const etapas: Etapa[] = [
  {
  diaLabel: "Dia 4-5",
  titulo: "Mãos à obra",
- body: "Aqui você borda a peça principal — flor central, folhas, miolos. É quando a chita ganha vida com a sua mão.",
+ body: "Aqui você borda a peça principal, flor central, folhas, miolos. É quando a chita ganha vida com a sua mão.",
  Icon: Bastidor,
  },
  {
  diaLabel: "Dia 6",
  titulo: "Finalize e fotografe",
- body: "A gente monta a bolsa: forro de algodão, alça, fechamento. E tira uma foto bonita pra você guardar — ou mostrar pra quem você quiser.",
+ body: "A gente monta a bolsa: forro de algodão, alça, fechamento. E tira uma foto bonita pra você guardar, ou mostrar pra quem você quiser.",
  Icon: Novelo,
  },
  {
  diaLabel: "Dia 7",
  titulo: "Use e abuse",
- body: "A bolsa pronta no mundo real — passeio, presente, ou só pra você mesma. Cada uma decide o que fazer com a sua.",
+ body: "A bolsa pronta no mundo real, passeio, presente, ou só pra você mesma. Cada uma decide o que fazer com a sua.",
  Icon: CoracaoBordado,
  },
 ];
@@ -59,7 +59,7 @@ export default function MetodoPorDias() {
  Como funciona o <Destaque>Desafio Primeira Bolsa</Destaque> em 7 dias.
  </TituloEditorial>
  <p className="mt-4 text-lg text-tinta-suave max-w-2xl mx-auto">
- 5 etapas, no seu tempo, comigo te guiando passo a passo. Tudo dividido em noites curtas — aqui ninguém corre.
+ 5 etapas, no seu tempo, comigo te guiando passo a passo. Tudo dividido em noites curtas, aqui ninguém corre.
  </p>
  </div>
  </FadeInView>

@@ -6,7 +6,7 @@ export default function PraQuem() {
  { Icon: Agulha, titulo: "Pra quem nunca pegou na agulha", body: "Eu te explico do zero, agulha por agulha. Não tem mistério, linda." },
  { Icon: Bastidor, titulo: "Pra quem trabalha em casa", body: "Aprende no seu tempo, no seu ritmo, sem horário marcado." },
  { Icon: CoracaoBordado, titulo: "Pra quem quer presentear", body: "Bolsa bordada à mão é presente que ninguém esquece." },
- { Icon: Novelo, titulo: "Pra quem quer começar a vender", body: "Algumas das minhas alunas começaram assim — eu te conto como funciona." },
+ { Icon: Novelo, titulo: "Pra quem quer começar a vender", body: "Algumas das minhas alunas começaram assim, eu te conto como funciona." },
  { Icon: Bastidor, titulo: "Pra quem tem pouco tempo", body: "Aulas curtas, do tamanho de um café. Você assiste no celular, na cozinha mesmo." },
  { Icon: Bastidor, titulo: "Pra quem só quer um hobby bonito", body: "Bordar acalma a alma. Você vai sentir." },
  ];

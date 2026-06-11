@@ -17,27 +17,27 @@ const itens = [
  {
  icone: "📐",
  titulo: "Moldes prontos",
- body: "Os riscos prontos pra imprimir e transferir pra chita — sem precisar desenhar do zero.",
+ body: "Os riscos prontos pra imprimir e transferir pra chita, sem precisar desenhar do zero.",
  },
  {
  icone: "📅",
  titulo: "Cronograma de 7 dias",
- body: "Um guia pra cada noite. Você sabe exatamente onde está e o que vem a seguir — aqui ninguém fica perdida.",
+ body: "Um guia pra cada noite. Você sabe exatamente onde está e o que vem a seguir, aqui ninguém fica perdida.",
  },
  {
  icone: "📋",
  titulo: "Lista de fornecedores",
- body: "Onde comprar tecido, linha mouliné e ferragens com qualidade — fornecedores testados por mim no ateliê.",
+ body: "Onde comprar tecido, linha mouliné e ferragens com qualidade, fornecedores testados por mim no ateliê.",
  },
  {
  icone: "💰",
  titulo: "Guia de preço",
- body: "Se um dia quiser vender, como calcular o preço da sua bolsa pronta. Mão de obra, material — tudo na tabela.",
+ body: "Se um dia quiser vender, como calcular o preço da sua bolsa pronta. Mão de obra, material, tudo na tabela.",
  },
  {
  icone: "📸",
  titulo: "Manual de fotografia",
- body: "Como fotografar sua peça pronta — pra postar, presentear ou vender se você quiser.",
+ body: "Como fotografar sua peça pronta, pra postar, presentear ou vender se você quiser.",
  },
 ];
 
@@ -51,7 +51,7 @@ export default function TudoIncluso() {
  Tudo que você precisa pra <Destaque>começar hoje mesmo</Destaque>.
  </TituloEditorial>
  <p className="mt-4 text-lg text-tinta-suave max-w-2xl mx-auto">
- Não é só videoaula. É <strong className="text-azul-royal font-normal">tudo o que você precisa</strong> pra fazer sua primeira bolsa — com calma e sem mistério.
+ Não é só videoaula. É <strong className="text-azul-royal font-normal">tudo o que você precisa</strong> pra fazer sua primeira bolsa, com calma e sem mistério.
  </p>
  </div>
  </FadeInView>

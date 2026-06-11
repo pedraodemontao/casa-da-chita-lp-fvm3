@@ -8,7 +8,7 @@ import {
   Manuscrita,
 } from "./marca";
 
-// Prints reais do grupo de alunas — depoimentos do WhatsApp
+// Prints reais do grupo de alunas, depoimentos do WhatsApp
 type Depoimento = {
  nome: string;
  arquivo: string;
@@ -22,7 +22,7 @@ const depoimentos: Depoimento[] = [
  nome: "Lidia",
  arquivo: "/fotos/provas-sociais/social-prof-lidia.png",
  quote: "A Jacira ensina tão bem que consegui fazer a bolsa.",
- contexto: "Primeira bolsa — sem saber costurar nem bordar.",
+ contexto: "Primeira bolsa, sem saber costurar nem bordar.",
  tilt: "",
  },
  {
@@ -36,14 +36,14 @@ const depoimentos: Depoimento[] = [
  nome: "Lorena",
  arquivo: "/fotos/provas-sociais/social-prof-lorena.png",
  quote: "Minha quarta filha! Tenho seis noras pra presentear.",
- contexto: "Faz uma bolsa atrás da outra — todas pra família.",
+ contexto: "Faz uma bolsa atrás da outra, todas pra família.",
  tilt: "",
  },
  {
  nome: "Lo",
  arquivo: "/fotos/provas-sociais/social-prof-lo.png",
  quote: "Viciada em bolsa, essa é a décima quinta!",
- contexto: "Aluna avançada — 15 peças e contando.",
+ contexto: "Aluna avançada, 15 peças e contando.",
  tilt: "",
  },
  {
@@ -72,7 +72,7 @@ export default function ProvasSociais() {
  </Manuscrita>
  </p>
  <p className="mt-4 text-lg text-tinta-suave max-w-2xl mx-auto">
- Depoimentos reais do grupo das bordadeiras. Todas começaram do zero — não tem mistério. Algumas presenteiam a família, outras tão vendendo em feira. Cada uma no seu tempo.
+ Depoimentos reais do grupo das bordadeiras. Todas começaram do zero, não tem mistério. Algumas presenteiam a família, outras tão vendendo em feira. Cada uma no seu tempo.
  </p>
  </div>
  </FadeInView>

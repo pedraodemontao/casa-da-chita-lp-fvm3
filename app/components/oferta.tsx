@@ -21,11 +21,11 @@ export default function Oferta() {
 
   const stack = [
      { item: "Curso Faça Você Mesma 3.0", valor: "R$ 197" },
-     { item: "Bônus #1 — 35 Pontos Essenciais (biblioteca catalogada)", valor: "R$ 67" },
-     { item: "Bônus #2 — Encontro Ao Vivo de Boas-Vindas com a Jacira", valor: "R$ 47", destaque: true },
-     { item: "Bônus #3 — Kit Imprimível da Bordadeira (PDF)", valor: "R$ 37", destaque: true },
-     { item: "Bônus #4 — Grupo Exclusivo de Alunas", valor: "R$ 27" },
-    { item: "Bônus #6 — Lista de Fornecedores Testados", valor: "R$ 7" },
+     { item: "Bônus #1: 35 Pontos Essenciais (biblioteca catalogada)", valor: "R$ 67" },
+     { item: "Bônus #2: Encontro Ao Vivo de Boas-Vindas com a Jacira", valor: "R$ 47", destaque: true },
+     { item: "Bônus #3: Kit Imprimível da Bordadeira (PDF)", valor: "R$ 37", destaque: true },
+     { item: "Bônus #4: Grupo Exclusivo de Alunas", valor: "R$ 27" },
+    { item: "Bônus #6: Lista de Fornecedores Testados", valor: "R$ 7" },
   ];
 
   return (

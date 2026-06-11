@@ -12,7 +12,7 @@ const pontos = [
  {
  arquivo: "/fotos/bonus/embroidery-1-chita-floral.jpg",
  titulo: "Bordado em chita estampada",
- body: "Como bordar diretamente sobre a estampa — usando o desenho como guia natural.",
+ body: "Como bordar diretamente sobre a estampa, usando o desenho como guia natural.",
  tilt: "",
  },
  {
@@ -24,19 +24,19 @@ const pontos = [
  {
  arquivo: "/fotos/bonus/embroidery-3-flor-macro.jpg",
  titulo: "Flor central com miolo",
- body: "Como construir uma flor protagonista do zero — pétala, miolo, contorno.",
+ body: "Como construir uma flor protagonista do zero, pétala, miolo, contorno.",
  tilt: "",
  },
  {
  arquivo: "/fotos/bonus/embroidery-4-folhas-verde.jpg",
  titulo: "Folhas que respiram",
- body: "Ponto haste + ponto cheio em verde — o equilíbrio que valoriza a flor.",
+ body: "Ponto haste + ponto cheio em verde, o equilíbrio que valoriza a flor.",
  tilt: "",
  },
  {
  arquivo: "/fotos/bonus/embroidery-5-colorido-denso.jpg",
  titulo: "Mix de cores e técnicas",
- body: "Como combinar 5+ cores sem perder harmonia — a chita ensina o caminho.",
+ body: "Como combinar 5+ cores sem perder harmonia, a chita ensina o caminho.",
  tilt: "",
  },
  {
@@ -57,7 +57,7 @@ export default function PontosEssenciais() {
  Conheça os <Destaque>35 Pontos Essenciais</Destaque> do bordado.
  </TituloEditorial>
  <p className="mt-4 text-lg text-tinta-suave max-w-2xl mx-auto">
- Biblioteca completa em <strong className="text-azul-royal font-normal">3 níveis</strong> — do ponto cruz básico ao acabamento que dá apresentação especial. Cada ponto explicado em vídeo curto, sem mistério.
+ Biblioteca completa em <strong className="text-azul-royal font-normal">3 níveis</strong>, do ponto cruz básico ao acabamento que dá apresentação especial. Cada ponto explicado em vídeo curto, sem mistério.
  </p>
  <Manuscrita tamanho="lg" cor="vermelho-chita" className="mt-3">
  o bônus que as alunas mais usam ✿

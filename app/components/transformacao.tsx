@@ -67,7 +67,7 @@ export default function Transformacao() {
  <p className="font-serif text-xl md:text-2xl italic leading-snug">
  Você ganha um ofício seu.
  <br />
- Suas bolsas viram presente, lembrança — e se quiser, renda também.
+ Suas bolsas viram presente, lembrança, e se quiser, renda também.
  </p>
  <BordaTracejada cor="azul-royal" inset={2} />
  </div>

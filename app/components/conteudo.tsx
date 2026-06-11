@@ -9,10 +9,10 @@ import {
 export default function Conteudo() {
  const aulas = [
  { n: "01", titulo: "Preparação do tecido", body: "Como escolher a chita, deixar o tecido pronto e os materiais que a gente vai usar do começo ao fim." },
- { n: "02", titulo: "O risco do desenho", body: "Como transferir o desenho pra chita sem errar — o segredinho que muita gente pula." },
- { n: "03", titulo: "Os pontos do bordado", body: "Ponto cruz, ponto haste e o famoso ponto caseado. Cada um explicado com calma — é só entender a dinâmica." },
+ { n: "02", titulo: "O risco do desenho", body: "Como transferir o desenho pra chita sem errar, o segredinho que muita gente pula." },
+ { n: "03", titulo: "Os pontos do bordado", body: "Ponto cruz, ponto haste e o famoso ponto caseado. Cada um explicado com calma, é só entender a dinâmica." },
  { n: "04", titulo: "Bordando a flor central", body: "A parte mais bonita: dar vida ao desenho com as cores da chita. Aqui ela vira altíssima qualidade." },
- { n: "05", titulo: "Montagem da bolsa", body: "Como fechar a peça, colocar forro firme de algodão e a alça. Sem máquina — só com agulha e linha." },
+ { n: "05", titulo: "Montagem da bolsa", body: "Como fechar a peça, colocar forro firme de algodão e a alça. Sem máquina, só com agulha e linha." },
  { n: "06", titulo: "Acabamento e detalhes", body: "Os pontos finos que valorizam imenso: arremate, dobras, retoque. Sua bolsa pronta pra usar." },
  ];
 
