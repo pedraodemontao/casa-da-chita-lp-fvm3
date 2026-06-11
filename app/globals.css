@@ -117,6 +117,11 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+/* Respiro acima de qualquer seção alvo de âncora (casa com OFFSET em smooth-anchors). */
+section[id] {
+  scroll-margin-top: 24px;
+}
+
 /* Imagens fluidas no mobile */
 img {
   max-width: 100%;

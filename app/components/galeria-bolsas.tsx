@@ -113,24 +113,6 @@ export default function GaleriaBolsas() {
             </div>
           ))}
         </div>
-
-        <FadeInView>
-          <div className="text-center max-w-2xl mx-auto pt-10 md:pt-12 pb-14 md:pb-28">
-            <p className="font-serif text-xl md:text-3xl text-azul-royal italic leading-snug">
-              E muitas outras combinações.
-              <br />
-              O passo a passo é o mesmo —{" "}
-              <Destaque cor="vermelho-chita">a sua bolsa é sua.</Destaque>
-            </p>
-            <div className="mt-6 md:mt-8 inline-flex items-center gap-3 text-tinta-suave">
-              <span className="h-px w-8 md:w-12 bg-mostarda" />
-              <Manuscrita tamanho="sm" cor="vermelho-chita" className="md:text-2xl">
-                veja a oferta abaixo ↓
-              </Manuscrita>
-              <span className="h-px w-8 md:w-12 bg-mostarda" />
-            </div>
-          </div>
-        </FadeInView>
     </Secao>
   );
 }

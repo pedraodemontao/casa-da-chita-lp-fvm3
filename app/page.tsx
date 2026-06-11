@@ -11,9 +11,9 @@ import Bonus from "./components/bonus";
 import Oferta from "./components/oferta";
 import Garantia from "./components/garantia";
 import Faq from "./components/faq";
-import FinalCta from "./components/final-cta";
 import { DivisorCostura } from "./components/decorations/divisor";
 import { SecaoCTACompacta } from "./components/botao-compra";
+import SmoothAnchors from "./components/smooth-anchors";
 
 // Decorativo, não-crítico — não bloqueia LCP
 const ScrollProgress = dynamic(() => import("./components/animations/scroll-progress"));
@@ -22,14 +22,11 @@ export default function Page() {
   return (
     <main>
       <ScrollProgress />
+      <SmoothAnchors />
       <Hero />
       <DivisorCostura />
       <GaleriaBolsas />
-      <SecaoCTACompacta
-        manuscrita="vem fazer a sua"
-        fundo="paper-claro"
-        acao="oferta"
-      />
+      <PraQuem />
       <MetodoPorDias />
       <TudoIncluso />
       <PontosEssenciais />
@@ -40,18 +37,11 @@ export default function Page() {
         acao="oferta"
       />
       <DivisorCostura />
-      <PraQuem />
-      <SecaoCTACompacta
-        manuscrita="esse curso é pra você"
-        fundo="paper-claro"
-        acao="oferta"
-      />
       <Bonus />
       <Oferta />
       <Jacira />
       <Garantia />
       <Faq />
-      <FinalCta />
       <footer className="bg-azul-royal text-creme py-10 text-center bg-papel-amassado" style={{backgroundColor: "var(--color-azul-royal)"}}>
         <p className="font-serif italic text-2xl text-creme">
           feito com linha e amor <span className="text-mostarda">♡</span>

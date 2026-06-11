@@ -20,7 +20,7 @@ export default function Oferta() {
   const handleCheckout = () => goToCheckout(precoAtual);
 
   const stack = [
-     { item: "Curso Faça Você Mesma 3.0 — 6 aulas", valor: "R$ 197" },
+     { item: "Curso Faça Você Mesma 3.0", valor: "R$ 197" },
      { item: "Bônus #1 — 35 Pontos Essenciais (biblioteca catalogada)", valor: "R$ 67" },
      { item: "Bônus #2 — Encontro Ao Vivo de Boas-Vindas com a Jacira", valor: "R$ 47", destaque: true },
      { item: "Bônus #3 — Kit Imprimível da Bordadeira (PDF)", valor: "R$ 37", destaque: true },
@@ -106,13 +106,12 @@ export default function Oferta() {
               <p className="font-sans text-tinta-suave text-base md:text-lg mb-1">
                 de <span className="line-through tabular-nums">R$ 399</span> por
               </p>
-              <p className="font-serif text-5xl md:text-7xl text-azul-royal leading-none flex items-baseline justify-center gap-1">
-                <span>R$</span>
-                <span className="tabular-nums">127</span>
-                <span className="text-3xl md:text-5xl tabular-nums">,00</span>
+              <p className="font-serif text-azul-royal leading-none flex items-baseline justify-center gap-2 whitespace-nowrap">
+                <span className="text-3xl md:text-5xl">12×</span>
+                <span className="text-5xl md:text-7xl tabular-nums">R$ {parcela}</span>
               </p>
               <p className="text-tinta-suave mt-2 mb-8 text-sm md:text-base">
-                ou <strong className="text-azul-royal font-medium">12× R$ {parcela}</strong> no cartão
+                ou <strong className="text-azul-royal font-medium">R$ 127 à vista</strong>
               </p>
 
               <BotaoCta
