@@ -3,7 +3,6 @@ import dynamic from "next/dynamic";
 import FadeInView from "./animations/fade-in-view";
 import {
   Secao,
-  Eyebrow,
   TituloEditorial,
   Destaque,
   Manuscrita,
@@ -74,9 +73,8 @@ export default function GaleriaBolsas() {
     <Secao fundo="papel-amassado" padding="nenhum" largura="wide" innerClassName="pt-14 md:pt-28">
         <FadeInView>
           <div className="text-center mb-10 md:mb-16">
-            <Eyebrow>O que você vai criar</Eyebrow>
-            <TituloEditorial as="h2" tamanho="lg" leading="snug" className="mt-3">
-              Olha só o que minhas <Destaque>alunas</Destaque> tão fazendo.
+            <TituloEditorial as="h2" tamanho="lg" leading="snug">
+              O que você vai <Destaque>criar?</Destaque>
             </TituloEditorial>
             <p className="mt-4 text-base md:text-lg text-tinta-suave max-w-2xl mx-auto">
               Mesmo passo a passo, mas cada uma faz a sua —{" "}
