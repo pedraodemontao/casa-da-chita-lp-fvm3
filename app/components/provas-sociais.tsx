@@ -92,15 +92,6 @@ export default function ProvasSociais() {
  sizes="(max-width: 768px) 100vw, 33vw"
  />
  </div>
- <div className="mt-4 px-3 pb-2">
- <p className="font-serif italic text-xl text-azul-royal leading-snug mb-2">
- &ldquo;{d.quote}&rdquo;
- </p>
- <p className="text-sm text-tinta-suave">
- <strong className="text-vermelho-chita font-normal">— {d.nome}.</strong>{" "}
- {d.contexto}
- </p>
- </div>
  </article>
  </FadeInView>
  ))}
