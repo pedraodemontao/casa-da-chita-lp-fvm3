@@ -64,12 +64,16 @@ export default function ProvasSociais() {
  <TituloEditorial as="h2" tamanho="lg" leading="snug" className="mt-3">
  Olha só o que minhas <Destaque>alunas</Destaque> tão fazendo.
  </TituloEditorial>
+ <p className="mt-4 font-serif italic text-2xl md:text-3xl text-azul-royal leading-snug max-w-2xl mx-auto">
+ Mais de <Destaque cor="vermelho-chita">1.000 mulheres</Destaque> já bordaram comigo.
+ <br />
+ <Manuscrita tamanho="lg" cor="vermelho-chita" className="not-italic">
+ a próxima pode ser você ✿
+ </Manuscrita>
+ </p>
  <p className="mt-4 text-lg text-tinta-suave max-w-2xl mx-auto">
  Depoimentos reais do grupo das bordadeiras. Todas começaram do zero — não tem mistério. Algumas presenteiam a família, outras tão vendendo em feira. Cada uma no seu tempo.
  </p>
- <Manuscrita tamanho="lg" cor="mostarda" className="mt-3">
- feitas com linha e amor ✿
- </Manuscrita>
  </div>
  </FadeInView>
 
@@ -102,17 +106,6 @@ export default function ProvasSociais() {
  ))}
  </div>
 
- <FadeInView delay={0.4}>
- <div className="text-center mt-16">
- <p className="font-serif italic text-2xl md:text-3xl text-azul-royal leading-snug max-w-2xl mx-auto">
- Mais de <Destaque cor="vermelho-chita">1.000 mulheres</Destaque> já bordaram comigo.
- <br />
- <Manuscrita tamanho="lg" cor="vermelho-chita" className="not-italic">
- a próxima pode ser você ✿
- </Manuscrita>
- </p>
- </div>
- </FadeInView>
  </Secao>
  );
 }

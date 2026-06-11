@@ -20,6 +20,9 @@
   --color-mostarda: #E2D030;
   --color-mostarda-clara: #F0E468;
   --color-verde-folha: #98A636;
+  --color-verde-cta: #18B84C;
+  --color-verde-cta-claro: #25D661;
+  --color-verde-cta-escuro: #0F8537;
   --color-rosa-chita: #E85A7A;
   --color-tinta: #1A1A1A;
   --color-tinta-suave: #3D3D3D;
@@ -306,8 +309,8 @@ h1, h2, h3, h4 {
 /* ===== BOTÕES ===== */
 
 .cta-primary {
-  background: var(--color-vermelho-chita);
-  color: var(--color-creme);
+  background: var(--color-verde-cta);
+  color: #FFFFFF;
   padding: 20px 36px;
   border-radius: 3px;
   font-family: var(--font-sans);
@@ -322,19 +325,19 @@ h1, h2, h3, h4 {
   cursor: pointer;
   position: relative;
   box-shadow:
-    0 2px 0 var(--color-vermelho-escuro),
-    1px 4px 12px rgba(204, 30, 21, 0.18);
+    0 2px 0 var(--color-verde-cta-escuro),
+    0 0 20px rgba(37, 214, 97, 0.55);
 }
 .cta-primary:hover {
-  background: var(--color-azul-royal);
+  background: var(--color-verde-cta-claro);
   box-shadow:
-    0 2px 0 var(--color-azul-escuro),
-    1px 4px 16px rgba(50, 60, 127, 0.22);
+    0 2px 0 var(--color-verde-cta-escuro),
+    0 0 28px rgba(37, 214, 97, 0.75);
   transform: translateY(-2px);
 }
 .cta-primary:active {
   transform: translateY(0);
-  box-shadow: 0 1px 0 var(--color-vermelho-escuro);
+  box-shadow: 0 1px 0 var(--color-verde-cta-escuro);
 }
 
 .cta-ghost {
@@ -406,7 +409,7 @@ h1, h2, h3, h4 {
   inset: 0;
   z-index: -1;
   border-radius: inherit;
-  background: var(--color-vermelho-chita);
+  background: var(--color-verde-cta-claro);
   animation: pulse-soft 2.4s ease-out infinite;
   transform-origin: center;
   pointer-events: none;

@@ -47,7 +47,7 @@ export default function FinalCta() {
  <ListaItens
  formato="inline"
  cor="vermelho-chita"
- items={["Acesso imediato", "14 dias de garantia", "Grupo de alunas"]}
+ items={["Acesso vitalício", "14 dias de garantia", "Grupo de alunas"]}
  className="mb-9"
  />
 

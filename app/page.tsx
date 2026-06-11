@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-import Ticker from "./components/ticker";
 import Hero from "./components/hero";
 import Jacira from "./components/jacira";
 import GaleriaBolsas from "./components/galeria-bolsas";
@@ -23,7 +22,6 @@ export default function Page() {
   return (
     <main>
       <ScrollProgress />
-      <Ticker />
       <Hero />
       <DivisorCostura />
       <GaleriaBolsas />

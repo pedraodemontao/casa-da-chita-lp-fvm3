@@ -2,7 +2,7 @@
 export default function Ticker() {
   const items = [
     "Bordado à mão",
-    "Acesso imediato",
+    "Acesso vitalício",
     "Chita de Ouro Preto",
     "14 dias de garantia",
     "Passo a passo com a Jacira",

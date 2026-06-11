@@ -13,10 +13,9 @@ import {
 } from "./marca";
 
 export default function Oferta() {
-  // Preço fixo: R$ 127 é ancoragem, R$ 99,90 é o preço de venda
-  const precoAtual = 99.90;
-  // 12× sem juros sobre 99,90 = 8,32 (arredondado pra 8,33 pra fechar)
-  const parcela = "8,33";
+  // Preço de venda: R$ 127 (12× R$ 13,13 no cartão)
+  const precoAtual = 127.00;
+  const parcela = "13,13";
 
   const handleCheckout = () => goToCheckout(precoAtual);
 
@@ -52,7 +51,7 @@ export default function Oferta() {
           <div className="bg-creme-claro border-[3px] border-azul-royal p-6 md:p-12 relative">
             {/* Selo OFF — centralizado no topo */}
             <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-mostarda text-azul-royal px-5 py-2 text-xs tracking-[0.25em] uppercase rounded-sm shadow-md">
-              75% OFF · 24h
+              68% OFF · 24h
             </div>
 
 
@@ -97,7 +96,7 @@ export default function Oferta() {
             </div>
             <div className="flex justify-between text-vermelho-chita mb-8 text-sm md:text-base">
               <span>Você economiza:</span>
-              <span className="font-sans tabular-nums">R$ 299</span>
+              <span className="font-sans tabular-nums">R$ 272</span>
             </div>
 
             <div className="text-center">
@@ -105,12 +104,12 @@ export default function Oferta() {
                 Hoje você investe
               </p>
               <p className="font-sans text-tinta-suave text-base md:text-lg mb-1">
-                de <span className="line-through tabular-nums">R$ 127</span> por
+                de <span className="line-through tabular-nums">R$ 399</span> por
               </p>
               <p className="font-serif text-5xl md:text-7xl text-azul-royal leading-none flex items-baseline justify-center gap-1">
                 <span>R$</span>
-                <span className="tabular-nums">99</span>
-                <span className="text-3xl md:text-5xl tabular-nums">,90</span>
+                <span className="tabular-nums">127</span>
+                <span className="text-3xl md:text-5xl tabular-nums">,00</span>
               </p>
               <p className="text-tinta-suave mt-2 mb-8 text-sm md:text-base">
                 ou <strong className="text-azul-royal font-medium">12× R$ {parcela}</strong> no cartão
@@ -125,7 +124,7 @@ export default function Oferta() {
               </BotaoCta>
 
               <p className="mt-5 text-xs md:text-sm text-tinta-suave">
-                🔒 Compra segura · ⚡ Acesso imediato no e-mail · 🧵 14 dias de garantia
+                🔒 Compra segura · ♾️ Acesso vitalício · 🧵 14 dias de garantia
               </p>
             </div>
 

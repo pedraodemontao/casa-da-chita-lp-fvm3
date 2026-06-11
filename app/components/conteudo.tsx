@@ -42,7 +42,7 @@ export default function Conteudo() {
  </div>
 
  <p className="text-center mt-12 font-serif italic text-2xl text-azul-royal">
- Acesso imediato.{" "}
+ Acesso vitalício.{" "}
  <Manuscrita tamanho="lg" cor="vermelho-chita" className="not-italic">
  Vem com tudo, no seu tempo.
  </Manuscrita>
