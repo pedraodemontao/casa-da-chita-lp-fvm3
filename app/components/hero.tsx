@@ -58,7 +58,7 @@ export default function Hero() {
  Aulas em vídeo, no seu ritmo, com a Jacira te guiando do risco até o acabamento.
  </p>
 
- <BotaoCta href="#metodo" pulse className="w-full justify-center">
+ <BotaoCta href="#metodo" pulse dataEvent="cta_scroll_metodo" className="cta-secundaria w-full justify-center">
  Quero fazer a minha primeira bolsa
  </BotaoCta>
 
@@ -101,7 +101,7 @@ export default function Hero() {
  Aulas em vídeo, no seu ritmo, com a Jacira te guiando do risco até o acabamento.
  </p>
 
- <BotaoCta href="#metodo" pulse>
+ <BotaoCta href="#metodo" pulse dataEvent="cta_scroll_metodo" className="cta-secundaria">
  Quero fazer a minha primeira bolsa
  </BotaoCta>
 

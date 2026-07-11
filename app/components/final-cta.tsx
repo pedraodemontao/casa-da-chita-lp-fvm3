@@ -51,7 +51,7 @@ export default function FinalCta() {
  className="mb-9"
  />
 
-<BotaoCta href="#oferta" pulse>
+<BotaoCta href="#oferta" pulse dataEvent="cta_scroll_oferta" className="cta-secundaria">
  Quero fazer minha primeira bolsa
  </BotaoCta>
 

@@ -27,6 +27,10 @@ type CommonProps = {
   /** Adiciona seta "→" no fim (default true). */
   seta?: boolean;
   className?: string;
+  /** ID estável no DOM (ex: "btn-checkout") — hook fixo pra GTM/Pixel. */
+  id?: string;
+  /** Marcação de evento estável — vira atributo `data-event` no DOM (ex: "initiate_checkout"). */
+  dataEvent?: string;
 };
 
 type AnchorProps = CommonProps & {
@@ -45,7 +49,7 @@ type ButtonProps = CommonProps & {
 type Props = AnchorProps | ButtonProps;
 
 export function BotaoCta(props: Props) {
-  const { children, variant = "primary", pulse, seta = true, className = "" } = props;
+  const { children, variant = "primary", pulse, seta = true, className = "", id, dataEvent } = props;
 
   const baseClass = variant === "primary" ? "cta-primary" : "cta-ghost";
   const pulseClass = pulse ? "cta-pulse-soft" : "";
@@ -61,6 +65,8 @@ export function BotaoCta(props: Props) {
   if ("href" in props && props.href) {
     return (
       <a
+        id={id}
+        data-event={dataEvent}
         href={props.href}
         target={props.target}
         rel={props.rel}
@@ -73,6 +79,8 @@ export function BotaoCta(props: Props) {
 
   return (
     <button
+      id={id}
+      data-event={dataEvent}
       type={"type" in props ? props.type ?? "button" : "button"}
       onClick={"onClick" in props ? props.onClick : undefined}
       className={finalClass}

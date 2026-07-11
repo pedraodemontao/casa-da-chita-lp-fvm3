@@ -9,12 +9,75 @@ export const CHECKOUT_URL = "https://pay.hotmart.com/U101396524P?checkoutMode=10
 // Teste Ticto:
 // export const CHECKOUT_URL = "https://checkout.ticto.app/O50141A17";
 
+function getCookie(name: string): string | undefined {
+  if (typeof document === "undefined") return undefined;
+  const m = document.cookie.match(new RegExp(`(?:^|;\\s*)${name}=([^;]+)`));
+  return m ? decodeURIComponent(m[1]) : undefined;
+}
+
 /**
- * Redireciona pro checkout do Cakto preservando os UTMs da URL atual.
- * Sem tracking client-side — Pixel/CAPI ficam por conta da plataforma de checkout.
+ * Dispara InitiateCheckout no Pixel + CAPI com o MESMO event_id (Meta deduplica),
+ * e empurra o evento pro dataLayer (GTM plug-and-play).
+ * keepalive garante que o POST do CAPI sobrevive ao redirect pro checkout.
+ * Tracking nunca pode bloquear a compra — fire-and-forget dentro de try/catch.
  */
-export function goToCheckout(_value: number = 127.00) {
+function trackInitiateCheckout(value: number) {
   if (typeof window === "undefined") return;
+  const eventId = `ic-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+  const content_name = "Faça Você Mesma 3.0";
+
+  const w = window as unknown as {
+    fbq?: (...args: unknown[]) => void;
+    dataLayer?: Record<string, unknown>[];
+  };
+
+  if (typeof w.fbq === "function") {
+    w.fbq(
+      "track",
+      "InitiateCheckout",
+      { value, currency: "BRL", content_name },
+      { eventID: eventId }
+    );
+  }
+
+  // GTM: evento no dataLayer (dispara mesmo antes do container existir; fica na fila).
+  (w.dataLayer = w.dataLayer || []).push({
+    event: "initiate_checkout",
+    value,
+    currency: "BRL",
+    content_name,
+    event_id: eventId,
+  });
+
+  try {
+    fetch("/api/track", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      keepalive: true,
+      body: JSON.stringify({
+        event_name: "InitiateCheckout",
+        event_id: eventId,
+        value,
+        currency: "BRL",
+        source_url: window.location.href,
+        fbp: getCookie("_fbp"),
+        fbc: getCookie("_fbc"),
+        custom: { content_name },
+      }),
+    }).catch(() => {});
+  } catch {
+    /* silencioso — tracking nunca bloqueia a compra */
+  }
+}
+
+/**
+ * Redireciona pro checkout preservando os UTMs/fbclid da URL atual
+ * e disparando InitiateCheckout (Pixel + CAPI deduplicados) antes do redirect.
+ */
+export function goToCheckout(value: number = 127.00) {
+  if (typeof window === "undefined") return;
+
+  trackInitiateCheckout(value);
 
   const params = new URLSearchParams(window.location.search);
   const sep = CHECKOUT_URL.includes("?") ? "&" : "?";
@@ -44,13 +107,17 @@ export default function BotaoCompra({
 }) {
   if (acao === "oferta") {
     return (
-      <a href="#oferta" className={classe}>
+      <a href="#oferta" data-event="cta_scroll_oferta" className={`cta-secundaria ${classe}`}>
         {texto} →
       </a>
     );
   }
   return (
-    <button onClick={() => goToCheckout(value)} className={classe}>
+    <button
+      data-event="initiate_checkout"
+      onClick={() => goToCheckout(value)}
+      className={`cta-principal ${classe}`}
+    >
       {texto} →
     </button>
   );

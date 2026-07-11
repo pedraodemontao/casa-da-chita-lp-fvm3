@@ -115,9 +115,11 @@ export default function Oferta() {
               </p>
 
               <BotaoCta
+                id="btn-checkout"
+                dataEvent="initiate_checkout"
                 onClick={handleCheckout}
                 pulse
-                className="w-full md:w-auto justify-center"
+                className="cta-principal w-full md:w-auto justify-center"
               >
                 Quero fazer minha primeira bolsa
               </BotaoCta>
