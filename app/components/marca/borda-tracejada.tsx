@@ -11,12 +11,13 @@
  * </div>
  */
 
-type Cor = "creme" | "azul-royal" | "mostarda";
+type Cor = "creme" | "azul-royal" | "mostarda" | "vermelho-chita";
 
 const corClass: Record<Cor, string> = {
   creme: "border-creme/30",
   "azul-royal": "border-azul-royal/20",
   mostarda: "border-mostarda/40",
+  "vermelho-chita": "border-vermelho-chita/30",
 };
 
 type Props = {
