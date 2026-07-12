@@ -30,6 +30,16 @@ export default function Page() {
           __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src="https://track.casadachita.com/9blkytsbd.js?"+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','6hqf8m9=DQZOMy0mQVc0KiEzIVleRBJfQVpITQgMWQESBxgPDQEMCwcVVwgDDw%3D%3D');`,
         }}
       />
+      {/* GTM (noscript) — fallback sem JavaScript */}
+      <noscript>
+        <iframe
+          src="https://track.casadachita.com/ns.html?6hqf8m9=DQZOMy0mQVc0KiEzIVleRBJfQVpITQgMWQESBxgPDQEMCwcVVwgDDw%3D%3D"
+          height="0"
+          width="0"
+          style={{ display: "none", visibility: "hidden" }}
+          title="gtm"
+        />
+      </noscript>
       <ScrollProgress />
       <SmoothAnchors />
       <Hero />
