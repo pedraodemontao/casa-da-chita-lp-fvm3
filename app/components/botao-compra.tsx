@@ -16,8 +16,11 @@ function getCookie(name: string): string | undefined {
 }
 
 /**
- * Dispara InitiateCheckout no Pixel + CAPI com o MESMO event_id (Meta deduplica),
- * e empurra o evento pro dataLayer (GTM plug-and-play).
+ * InitiateCheckout: empurra o evento pro dataLayer — o GTM (container
+ * GTM-5PHRGX22, via track.casadachita.com) dispara o Pixel + server-side/Stape
+ * a partir dele. Também manda a CAPI própria em /api/track com o MESMO event_id
+ * (Meta deduplica). SEM fbq manual: o GTM é o dono do Pixel (evita furar o GTM
+ * e o PageView/IC duplicado).
  * keepalive garante que o POST do CAPI sobrevive ao redirect pro checkout.
  * Tracking nunca pode bloquear a compra — fire-and-forget dentro de try/catch.
  */
@@ -27,18 +30,8 @@ function trackInitiateCheckout(value: number) {
   const content_name = "Faça Você Mesma 3.0";
 
   const w = window as unknown as {
-    fbq?: (...args: unknown[]) => void;
     dataLayer?: Record<string, unknown>[];
   };
-
-  if (typeof w.fbq === "function") {
-    w.fbq(
-      "track",
-      "InitiateCheckout",
-      { value, currency: "BRL", content_name },
-      { eventID: eventId }
-    );
-  }
 
   // GTM: evento no dataLayer (dispara mesmo antes do container existir; fica na fila).
   (w.dataLayer = w.dataLayer || []).push({

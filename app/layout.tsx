@@ -4,9 +4,6 @@ import Script from "next/script";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
-// Meta Pixel NOVO — Casa da Chita / Faça Você Mesma 3.0
-const META_PIXEL_ID = "1536814544717090";
-
 // Microsoft Clarity — heatmaps + session replay
 const CLARITY_PROJECT_ID = "wtejljm2z9";
 
@@ -81,24 +78,9 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head />
-      <Script
-        id="meta-pixel"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '${META_PIXEL_ID}');
-fbq('track', 'PageView');
-`,
-        }}
-      />
+      {/* Meta Pixel: NÃO carregado aqui. O GTM (container GTM-5PHRGX22, via
+          track.casadachita.com) é o dono do Pixel + eventos. Carregar o pixel
+          manual aqui duplicava o PageView. */}
 
       {/* Microsoft Clarity — heatmaps + session replay */}
       <Script
@@ -126,16 +108,6 @@ fbq('track', 'PageView');
         defer
       />
       <body>
-        {/* Fallback pra navegadores sem JavaScript */}
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
-            alt=""
-          />
-        </noscript>
         {children}
         <SpeedInsights />
       </body>
