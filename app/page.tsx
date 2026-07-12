@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import Script from "next/script";
 import Hero from "./components/hero";
 import Jacira from "./components/jacira";
 import GaleriaBolsas from "./components/galeria-bolsas";
@@ -21,6 +22,14 @@ const ScrollProgress = dynamic(() => import("./components/animations/scroll-prog
 export default function Page() {
   return (
     <main>
+      {/* Google Tag Manager (server-side, track.casadachita.com) — só na página de vendas */}
+      <Script
+        id="gtm-casadachita"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src="https://track.casadachita.com/9blkytsbd.js?"+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','6hqf8m9=DQZOMy0mQVc0KiEzIVleRBJfQVpITQgMWQESBxgPDQEMCwcVVwgDDw%3D%3D');`,
+        }}
+      />
       <ScrollProgress />
       <SmoothAnchors />
       <Hero />
